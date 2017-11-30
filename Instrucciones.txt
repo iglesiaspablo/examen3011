@@ -1,0 +1,21 @@
+IMPORTANTE: Hagan lo que puedan en el tiempo que se les ha asignado. Prioricen el siguiente listado y 
+decidan qué tareas realizar en el orden que consideren.
+
+- Completar los siguientes datos:
+	.Nombre y Apellido:
+	.Hora de Inicio de la parte práctica:
+	.Hora de Fin de la parte práctica:
+- Crear una rama nueva con la primer letra de su nombre y su apellido. Por ej: piglesias
+- Inicializar el proyecto con los comandos ya conocidos (Composer, Migraciones, Seeds)
+
+
+
+- Modificar todos los listados para que no aparezcan las columnas ID, Created ni Modified.
+- Modificar las entidades relacionadas en los listados para que muestre el nombre en lugar del id (Por ejemplo:
+en la vista equipos/index, en lugar de mostrar el id de la liga, mostrar el nombre).
+- Crear una nueva vista que muestre solo los jugadores que no están habilitados para jugar.
+- Crear una nueva vista que muestre todos los jugadores pertenecientes a un equipo.
+
+
+
+- Agregar todos los archivos y pushearlos a git en la rama antes creada.
