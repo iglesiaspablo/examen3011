@@ -29,6 +29,31 @@ class JugadorsController extends AppController
         $this->set('_serialize', ['jugadors']);
     }
 
+     public function index()
+    {
+        $this->paginate = [
+            'contain' => ['Equipos']
+        ];
+        $jugadors = $this->paginate($this->Jugadors);
+
+        $this->set(compact('jugadors'));
+        $this->set('_serialize', ['jugadors']);
+    }
+    
+     public function jugadordeequipo()
+             
+    {
+        $this->paginate = [
+            'contain' => ['Equipos']
+
+        ];
+        $jugadors = $this->paginate($this->Jugadors);
+if ($this->request->is('post')) {
+            $jugadors = $this->jugadors->patchEntity($jugadors, $this->request->getData());    
+            $jugadors->esta_sancionado = "0";
+        $this->set(compact('jugadors'));
+        $this->set('_serialize', ['jugadors']);
+    }
     /**
      * View method
      *

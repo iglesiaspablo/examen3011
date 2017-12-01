@@ -17,13 +17,10 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('deporte') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('fecha_inicio') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('fecha_fin') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -35,8 +32,6 @@
                 <td><?= h($liga->deporte) ?></td>
                 <td><?= h($liga->fecha_inicio) ?></td>
                 <td><?= h($liga->fecha_fin) ?></td>
-                <td><?= h($liga->created) ?></td>
-                <td><?= h($liga->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $liga->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $liga->id]) ?>
