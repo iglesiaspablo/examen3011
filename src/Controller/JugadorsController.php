@@ -57,8 +57,10 @@ class JugadorsController extends AppController
         $this->paginate = [
             'contain' => ['Equipos']
         ];            
-            
-        $jugadors = $this->paginate($this->Jugadors);     
+            if($jugadors->esta_sancionado === 0){
+                $jugadors = $this->paginate($this->Jugadors);     
+            }
+        
 
         $this->set(compact('jugadors'));
         $this->set('_serialize', ['jugadors']);
