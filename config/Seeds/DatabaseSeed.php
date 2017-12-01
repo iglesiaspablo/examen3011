@@ -75,6 +75,7 @@ class DatabaseSeed extends AbstractSeed
                 'fecha_nacimiento' => $faker->date("Y-m-d"),
                 'rating' => $faker->randomDigit(),
                 'posicion' => $faker->randomElement(array("arquero", "defensor", "mediocampista", "delantero", "polifuncional")),
+                'equipo_id' => $faker->randomElement($equiposIds),
                 'esta_sancionado' => $faker->randomDigit(),
                 'created'    => date("Y-m-d H:i:s"),
                 'modified'   => date("Y-m-d H:i:s")
