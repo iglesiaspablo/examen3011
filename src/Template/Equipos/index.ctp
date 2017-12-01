@@ -19,26 +19,24 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+               
                 <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('ciudad') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('provincia') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('liga_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+               
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($equipos as $equipo): ?>
             <tr>
-                <td><?= h($equipo->id) ?></td>
+               
                 <td><?= h($equipo->nombre) ?></td>
                 <td><?= h($equipo->ciudad) ?></td>
                 <td><?= h($equipo->provincia) ?></td>
-                <td><?= $equipo->has('liga') ? $this->Html->link($equipo->liga->id, ['controller' => 'Ligas', 'action' => 'view', $equipo->liga->id]) : '' ?></td>
-                <td><?= h($equipo->created) ?></td>
-                <td><?= h($equipo->modified) ?></td>
+                <td><?= $equipo->has('liga') ? $this->Html->link($equipo->liga->nombre, ['controller' => 'Ligas', 'action' => 'view', $equipo->liga->id]) : '' ?></td>
+                
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $equipo->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $equipo->id]) ?>

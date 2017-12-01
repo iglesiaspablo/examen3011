@@ -20,10 +20,7 @@
 <div class="equipos view large-9 medium-8 columns content">
     <h3><?= h($equipo->id) ?></h3>
     <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= h($equipo->id) ?></td>
-        </tr>
+        
         <tr>
             <th scope="row"><?= __('Nombre') ?></th>
             <td><?= h($equipo->nombre) ?></td>
@@ -38,7 +35,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Liga') ?></th>
-            <td><?= $equipo->has('liga') ? $this->Html->link($equipo->liga->id, ['controller' => 'Ligas', 'action' => 'view', $equipo->liga->id]) : '' ?></td>
+            <td><?= $equipo->has('liga') ? $this->Html->link($equipo->liga->nombre, ['controller' => 'Ligas', 'action' => 'view', $equipo->liga->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>

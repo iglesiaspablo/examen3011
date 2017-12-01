@@ -10,7 +10,7 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\Jugador[] paginate($object = null, array $settings = [])
  */
-class JugadorsController extends AppController
+class JugadorsController extends AppController 
 {
 
     /**
@@ -29,6 +29,25 @@ class JugadorsController extends AppController
         $this->set('_serialize', ['jugadors']);
     }
 
+    
+     /**
+     * jugadoresequipo method
+     *
+     * @return \Cake\Http\Response|void
+     */
+    public function jugadoresequipo()
+    {
+        $this->paginate = [
+            'contain' => ['Equipos']
+        ];            
+            
+        $jugadors = $this->paginate($this->Jugadors);     
+
+        $this->set(compact('jugadors'));
+        $this->set('_serialize', ['jugadors']);
+    }
+
+    
     /**
      * View method
      *

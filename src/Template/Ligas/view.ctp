@@ -18,10 +18,7 @@
 <div class="ligas view large-9 medium-8 columns content">
     <h3><?= h($liga->id) ?></h3>
     <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= h($liga->id) ?></td>
-        </tr>
+       
         <tr>
             <th scope="row"><?= __('Nombre') ?></th>
             <td><?= h($liga->nombre) ?></td>

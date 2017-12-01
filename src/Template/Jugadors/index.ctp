@@ -17,7 +17,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                
                 <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('apellido') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('posicion') ?></th>
@@ -25,24 +25,22 @@
                 <th scope="col"><?= $this->Paginator->sort('rating') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('esta_sancionado') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('equipo_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+               
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($jugadors as $jugador): ?>
             <tr>
-                <td><?= h($jugador->id) ?></td>
+                
                 <td><?= h($jugador->nombre) ?></td>
                 <td><?= h($jugador->apellido) ?></td>
                 <td><?= h($jugador->posicion) ?></td>
                 <td><?= h($jugador->fecha_nacimiento) ?></td>
                 <td><?= $this->Number->format($jugador->rating) ?></td>
                 <td><?= $this->Number->format($jugador->esta_sancionado) ?></td>
-                <td><?= $jugador->has('equipo') ? $this->Html->link($jugador->equipo->id, ['controller' => 'Equipos', 'action' => 'view', $jugador->equipo->id]) : '' ?></td>
-                <td><?= h($jugador->created) ?></td>
-                <td><?= h($jugador->modified) ?></td>
+                <td><?= $jugador->has('equipo') ? $this->Html->link($jugador->equipo->nombre, ['controller' => 'Equipos', 'action' => 'view', $jugador->equipo->id]) : '' ?></td>
+                
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $jugador->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $jugador->id]) ?>

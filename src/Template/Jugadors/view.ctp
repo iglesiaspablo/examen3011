@@ -18,10 +18,7 @@
 <div class="jugadors view large-9 medium-8 columns content">
     <h3><?= h($jugador->id) ?></h3>
     <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= h($jugador->id) ?></td>
-        </tr>
+        
         <tr>
             <th scope="row"><?= __('Nombre') ?></th>
             <td><?= h($jugador->nombre) ?></td>
@@ -36,7 +33,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Equipo') ?></th>
-            <td><?= $jugador->has('equipo') ? $this->Html->link($jugador->equipo->id, ['controller' => 'Equipos', 'action' => 'view', $jugador->equipo->id]) : '' ?></td>
+            <td><?= $jugador->has('equipo') ? $this->Html->link($jugador->equipo->nombre, ['controller' => 'Equipos', 'action' => 'view', $jugador->equipo->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Rating') ?></th>
