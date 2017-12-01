@@ -13,7 +13,7 @@
     </ul>
 </nav>
 <div class="jugadors index large-9 medium-8 columns content">
-    <h3><?= __('Jugadors') ?></h3>
+    <h3><?= __('Jugadores que pertenecen a equipos') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
