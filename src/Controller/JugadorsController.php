@@ -47,6 +47,22 @@ class JugadorsController extends AppController
         $this->set('_serialize', ['jugadors']);
     }
 
+     /**
+     * jugadoreshabilitados method
+     *
+     * @return \Cake\Http\Response|void
+     */
+    public function jugadoreshabilitado()
+    {
+        $this->paginate = [
+            'contain' => ['Equipos']
+        ];            
+            
+        $jugadors = $this->paginate($this->Jugadors);     
+
+        $this->set(compact('jugadors'));
+        $this->set('_serialize', ['jugadors']);
+    }
     
     /**
      * View method
